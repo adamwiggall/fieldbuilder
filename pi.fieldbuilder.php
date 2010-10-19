@@ -68,19 +68,19 @@ var $return_data = '';
 		
 		switch ($field_type) {
 			case 'text':
-				$tagdata = form_label($field_name, $field_id, $label_attributes);
+				$tagdata = form_label($field_name, $field_id);
 				$tagdata .= form_input($input_data);
 				break;
 				
 			case 'text_area':
-				$tagdata = form_label($field_name, $field_id, $label_attributes);
+				$tagdata = form_label($field_name, $field_id);
 				$input_data['rows'] = '10';
 				$input_data['cols'] = '30';
 				$tagdata .= form_textarea($input_data);
 				break;
 				
 			case 'select':
-				$tagdata = form_label($field_name, $field_id, $label_attributes);
+				$tagdata = form_label($field_name, $field_id);
 				// create the associative array of selectables
 				$options = explode(",", $options);
 				$selectables = array("" => "Please Select...");
@@ -125,7 +125,7 @@ var $return_data = '';
 					$option_name = trim($option);
 					$option_value = url_title($option,"underscore",true);
 					$tagdata .= form_radio($field_id, $option_value, false);
-					$tagdata .= form_label($option_name, $field_id, $label_attributes);
+					$tagdata .= form_label($option_name, $field_id);
 				}
 				break;
 			
