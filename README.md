@@ -1,12 +1,11 @@
-FieldBuilder for ExpressionEngine 2.1.1
+FieldBuilder for ExpressionEngine 2.1
 =========
 
 **Fieldbuilder** is a plugin that will return a form label and input field from a given set of expressionengine fields.
 
-For ExpressionEngine installation, the directory /fieldbuilder should be placed in /system/expressionengine/third_party/
+Installation. The directory /fieldbuilder should be placed in /system/expressionengine/third_party/
 
-Usage
------
+## Usage
 
 	{exp:fieldbuilder 
 		label="{the_display_name_for_the_field}" 
@@ -16,8 +15,7 @@ Usage
 		req"{yes_or_no}"
 	}
 
-Works Best With
----------------
+## Works Best With...
 
 ### 'Matrix' by Pixel & Tonic
 
@@ -26,10 +24,10 @@ The plugin works best with a matrix of fields that can be set by a user in the e
 #### Examples
 
 1. For a {type} of "text" the plugin would return,
-	<pre>
+	<code>
 	<label for="{name}">{label}</label>
 	<input type="{type}" name="{name}" id="{name}" />
-	</pre>
+	</code>
 	
 2. For a {type} of "select" the plugin would return,
 
