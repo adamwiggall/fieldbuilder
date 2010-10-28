@@ -6,7 +6,7 @@ FieldBuilder for ExpressionEngine 2
 For ExpressionEngine installation, the directory /fieldbuilder should be placed in /system/expressionengine/third_party/
 
 Usage
--------
+-----
 
 	{exp:fieldbuilder 
 		label="{the_display_name_for_the_field}" 
@@ -15,11 +15,24 @@ Usage
 		options="{comma_separated_list_of_options}" 
 		req"{yes_or_no}"
 	}
-	
+
+Works Best With
+---------------
+
+### Matrix by Pixel & Tonic
+
 The plugin works best with a matrix of fields that can be set by a user in the expressionengine control panel when publishing an entry.
 
-For a {type} of "text" the plugin would return the following,
+#### Examples
 
+1. For a {type} of "text" the plugin would return,
+
+	<pre><code>
 	<label for="{name}">{label}</label>
 	<input type="{type}" name="{name}" id="{name}" />
+	</code></pre>
+	
+2. For a {type} of "select" the plugin would return,
+
+	
 	
