@@ -25,8 +25,8 @@ The plugin works best with a matrix of fields that can be set by a user in the e
 
 1. For a {type} of "text" the plugin would return,
 
-	`<label for=""></label>
-	<input type="" name="" id="" />`
+	`<label for=""></label>`
+	`<input type="" name="" id="" />`
 
 	
 2. For a {type} of "select" the plugin would return,
