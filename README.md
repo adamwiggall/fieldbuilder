@@ -1,4 +1,4 @@
-FieldBuilder for ExpressionEngine 2
+FieldBuilder for ExpressionEngine 2.1.1
 =========
 
 **Fieldbuilder** is a plugin that will return a form label and input field from a given set of expressionengine fields.
@@ -19,18 +19,20 @@ Usage
 Works Best With
 ---------------
 
-### Matrix by Pixel & Tonic
+### 'Matrix' by Pixel & Tonic
 
 The plugin works best with a matrix of fields that can be set by a user in the expressionengine control panel when publishing an entry.
 
 #### Examples
 
 1. For a {type} of "text" the plugin would return,
-
+	<pre>
 	<label for="{name}">{label}</label>
 	<input type="{type}" name="{name}" id="{name}" />
+	</pre>
 	
 2. For a {type} of "select" the plugin would return,
 
 	
 	
+This plugin has been tested on EE2.1 running PHP 5.3.
