@@ -35,13 +35,13 @@ For a {type} of "select" the plugin would return,
 	
 
 This plugin currently supports the following fieldtypes. *Name* *[variant]* *(argument)*
-1. Input (text)
-2. Text Area (text_area)
-3. Select (select)
-4. Select [multiple] (multi)
-4. Upload (upload)
-5. Checkbox [single] (checkbox)
-6. Checkbox [multiple] (multic)
-7. Radio Buttons (radio)
+1. 	Input (text)
+2. 	Text Area (text_area)
+3. 	Select (select)
+4. 	Select [multiple] (multi)
+5. 	Upload (upload)
+6. 	Checkbox [single] (checkbox)
+7. 	Checkbox [multiple] (multic)
+8. 	Radio Buttons (radio)
 
 This plugin has been tested on EE2.1 running PHP 5.3.
