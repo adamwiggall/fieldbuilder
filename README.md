@@ -34,7 +34,8 @@ For a {type} of "select" the plugin would return,
 
 	
 
-This plugin currently supports the following fieldtypes. *Name* *[variant]* *(argument)*
+This plugin currently supports the following fieldtypes. *Name* *[variant]* *(argument)*  
+
 1. 	Input (text)
 2. 	Text Area (text_area)
 3. 	Select (select)
