@@ -92,6 +92,11 @@ var $return_data = '';
 				$tagdata .= form_dropdown($field_id, $selectables, '', $select_extra);
 				break;
 				
+			case 'upload':
+				$tagdata = form_label($field_name, $field_id);
+				$tagdata .= form_upload($input_data);
+				break;
+
 			case 'multi':
 				$tagdata = form_label($field_name, $field_id, $label_attributes);
 				// create the associative array of selectables
@@ -140,6 +145,7 @@ var $return_data = '';
 					$tagdata .= form_label($option_name, $field_id, $label_attributes);
 				}				
 				break;
+				
 				
 			default:
 				$tagdata = "Field type unknown, please check the entry";
