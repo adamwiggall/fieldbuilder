@@ -1,7 +1,7 @@
 FieldBuilder for ExpressionEngine 2.1
 =========
 
-**Fieldbuilder** is a plugin that will return a form label and input field from a given set of expressionengine fields.
+**Fieldbuilder** is a plugin that will return a form label and form field from a given set of expressionengine fields.
 
 Installation. The directory */fieldbuilder* should be placed in */system/expressionengine/third_party/*
 
