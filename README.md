@@ -11,8 +11,9 @@ Installation. The directory */fieldbuilder* should be placed in */system/express
 		label="{the_display_name_for_the_field}" 
 		type="{form_input_type}"
 		name="{to_create_name_and_id}"
-		options="{comma_separated_list_of_options}" 
-		req"{yes_or_no}"
+		options="{comma_separated_list_of_options}"
+		class="{adds a class to the label}"
+		req="{yes_or_no}"
 	}
 
 ## Works Best With...
