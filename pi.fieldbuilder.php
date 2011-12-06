@@ -42,17 +42,19 @@ var $return_data = '';
 		$field_type = ($this->EE->TMPL->fetch_param('type')) ? strtolower(($this->EE->TMPL->fetch_param('type'))) : '';
 		$required =  ($this->EE->TMPL->fetch_param('req')) ? strtolower(($this->EE->TMPL->fetch_param('req'))) : '';
 		$options = ($this->EE->TMPL->fetch_param('options')) ? ($this->EE->TMPL->fetch_param('options')) : '';
-		$field_id = ($this->EE->TMPL->fetch_param('name')) ? ($this->EE->TMPL->fetch_param('name')) : '';;
+		$field_id = ($this->EE->TMPL->fetch_param('name')) ? ($this->EE->TMPL->fetch_param('name')) : '';
+		$field_class = ($this->EE->TMPL->fetch_param('class')) ? ($this->EE->TMPL->fetch_param('class')) : '';
 		
 		// Additional attributes for the label (must be associative array)
 		$label_attributes = array(
-			'for' => $field_id,
+			'for' => $field_id
 		);
 		
 		// Standard attributes for the inputs	
 		$input_data = array(
 			'name' => $field_id,
 			'id' => $field_id,
+			'class' => $field_class,
 			'value' => ''
 		);
 		
@@ -68,19 +70,19 @@ var $return_data = '';
 		
 		switch ($field_type) {
 			case 'text':
-				$tagdata = form_label($field_name, $field_id);
+				$tagdata = form_label($field_name, $field_id, $field_class);
 				$tagdata .= form_input($input_data);
 				break;
 				
 			case 'text_area':
-				$tagdata = form_label($field_name, $field_id);
+				$tagdata = form_label($field_name, $field_id, $field_class);
 				$input_data['rows'] = '10';
 				$input_data['cols'] = '30';
 				$tagdata .= form_textarea($input_data);
 				break;
 				
 			case 'select':
-				$tagdata = form_label($field_name, $field_id);
+				$tagdata = form_label($field_name, $field_id, $field_class, $field_class);
 				// create the associative array of selectables
 				$options = explode(",", $options);
 				$selectables = array("" => "Please Select...");
@@ -93,12 +95,12 @@ var $return_data = '';
 				break;
 				
 			case 'upload':
-				$tagdata = form_label($field_name, $field_id);
+				$tagdata = form_label($field_name, $field_id, $field_class);
 				$tagdata .= form_upload($input_data);
 				break;
 
 			case 'multi':
-				$tagdata = form_label($field_name, $field_id, $label_attributes);
+				$tagdata = form_label($field_name, $field_id, $label_attributes, $field_class);
 				// create the associative array of selectables
 				$options = explode(",", $options);
 				foreach ($options as $option) {
@@ -118,7 +120,7 @@ var $return_data = '';
 				$option_name = trim($option);
 				$option_value = url_title($option,"underscore",true);
 				$tagdata .= form_checkbox($field_id . "[]", $option_value, false);
-				$tagdata .= form_label($option_name, $field_id, $label_attributes);
+				$tagdata .= form_label($option_name, $field_id, $label_attributes, $field_class);
 			}
 				break;
 			
@@ -130,7 +132,7 @@ var $return_data = '';
 					$option_name = trim($option);
 					$option_value = url_title($option,"underscore",true);
 					$tagdata .= form_radio($field_id, $option_value, false);
-					$tagdata .= form_label($option_name, $field_id);
+					$tagdata .= form_label($option_name, $field_id, $field_class);
 				}
 				break;
 			
@@ -142,7 +144,7 @@ var $return_data = '';
 					$option_name = trim($option);
 					$option_value = url_title($option,"underscore",true);
 					$tagdata .= form_checkbox($field_id, $option_value, false);
-					$tagdata .= form_label($option_name, $field_id, $label_attributes);
+					$tagdata .= form_label($option_name, $field_id, $label_attributes, $field_class);
 				}				
 				break;
 				
